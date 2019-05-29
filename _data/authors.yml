@@ -25,7 +25,7 @@ default:                                                      # Fallback if noth
   reddit:                                                     # OPTIONAL: used in the about page
 jdecent:
   initial:      jdecent
-  name:         "Jekyll Decent"       
+  name:         "Ahmad El Sallab"       
   cover:        /assets/mountain-alternative-cover.jpg  
   picture:      /assets/johndoe.jpg  
   bio:          This is my bio!
