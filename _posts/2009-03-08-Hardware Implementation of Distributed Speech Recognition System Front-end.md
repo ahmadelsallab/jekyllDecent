@@ -1,7 +1,7 @@
 ---
 layout:            post
 title:             "EUSIPCO, 2009"
-menutitle:         "Content styles"
+menutitle:         "Publications"
 category:          Publications
 author:            asallab
 tags:              
