@@ -25,14 +25,14 @@ default:                                                      # Fallback if noth
   reddit:                                                     # OPTIONAL: used in the about page
 asallab:
   initial:      asallab
-  name:         "Ahmad El Sallab"       
+  name:         "Dr. Ahmad El Sallab"       
   cover:        /assets/mountain-alternative-cover.jpg  
   picture:      /assets/Photo.jpg  
   bio:          PhD | AI Senior Expert | Senior Chief Scientist
   location:     Egypt
   email:        "ahmad.elsallab@gmail.com"   
-  twitter:      "-"    
-  twitch:       "-"
+  twitter:          
+  twitch:       
 jwillmer:
   initial:      jwillmer
   name:         "Jens Willmer"        
