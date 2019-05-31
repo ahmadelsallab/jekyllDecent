@@ -3,7 +3,7 @@ default:                                                      # Fallback if noth
   name:         "Ahmad El Sallab"                               # used to display author name
   cover:        /assets/mountain-alternative-cover.jpg        # OPTIONAL: defines location of cover image in about page
   picture:      /assets/Photo.jpg                           # OPTIONAL: author picture
-  bio:          This is my bio!                               # OPTIONAL: text below author name in posts
+  bio:          PhD | AI Senior Expert | Senior Chief Scientist                              # OPTIONAL: text below author name in posts
   location:     Egypt                                       # OPTIONAL: used to display location of the author
   website:                          						  # OPTIONAL: link to the author of a post
   email:                                                      # OPTIONAL: used in the about page
@@ -28,7 +28,7 @@ jdecent:
   name:         "Ahmad El Sallab"       
   cover:        /assets/mountain-alternative-cover.jpg  
   picture:      /assets/Photo.jpg  
-  bio:          This is my bio!
+  bio:          PhD | AI Senior Expert | Senior Chief Scientist
   location:     Egypt
   email:        "ahmad.elsallab@gmail.com"   
   twitter:      "-"    
