@@ -1,0 +1,50 @@
+---
+layout:    about
+permalink: "/publications"
+author:    asallab
+keywords:  deep learning ahmad el sallab
+title:     Publications 
+menutitle: Publications
+weight:    70
+excerpt:   This page contains the publications of the author.
+---
+{% assign pubs = site.data.publications[page.author] %}
+
+<div class="md-card no-border">
+    <p>{{pubs.profile}}</p>
+</div>
+
+<div class="md-card shadow">
+    <div class="title icon-library">
+        <h2>Publications</h2>
+    </div>
+    <div class="content">
+        <ul>
+            {% for publication in pubs.publications %}
+            <li>{{ publication }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="timeline-container">
+    {% for employment in cv.employment %}
+    <div class="timeline-block">
+        <div class="marker"></div>
+        <div class="time">{{employment.time}}</div>
+        <div class="timeline-content">
+            <div class="time">{{employment.time}}</div>
+            <h3>{{employment.position}}</h3>
+            <span>{{employment.company}} ({{employment.location}})</span>
+            <ul>
+                {% for responsibility in employment.responsibilities %}
+                <li>{{responsibility}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
