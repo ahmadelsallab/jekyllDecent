@@ -1,10 +1,10 @@
 asallab:
     profile: "Ahmad El Sallab is the Senior Chief Engineer of Deep Learning at Valeo Egypt, and Senior Expert at Valeo Group. Ahmad has 14 years of experience in Machine Learning and Deep Learning, where he acquired his M.Sc. and Ph.D. on 2009 and 2013 in the field. He has worked for reputable multi-national organization in the industry since 2005 like Intel and Valeo. He has many publications and book chapters in Deep Learning in top IEEE and ACM journals and conferences, in addition to many patents, with applications in Speech, NLP, Computer Vision and Robotics."
     publications:
-        - "Python, ASP.NET MVC"
-        - "XAML, WPF, LINQ, Silverlight"
-        - "JavaScript, jQuery, HTML5, CSS, LESS"
-        - "Web Services, Active Directory, Windows 10, Windows Phone Apps"
+        - "A. Sallab, H. A. Fahmy, M. Rashwan, “Hardware Implementation of Distributed Speech Recognition System Front-end”, In proceedings of 17th European Signal Processing Conference (EUSIPCO) – Aug. 2009"
+        - "A. Sallab, H. A. Fahmy, M. Rashwan “Optimized Hardware Implementation of FFT processor”, In proceedings of 4th International Design and Test Workshop (IDT)- 2009 , Riyadh, Saudi-Arabia"
+        - "A. Sallab, H. Rashwan “Self Learning Machines using Deep Networks”, in Proceedings of 2011 International Conference of Soft Computing and Pattern Recognition (SoCPaR), pp. 21 – 26, 14-16 Oct. 2011"
+        - "A. Sallab, M. Rashwan “E-mail Classification using Deep Networks”, Journal of Theoretical and Applied Information Technology (JATIT), ISSN 1992-8645, pp. 241 – 251, Vol. 37. No. 2 - March, 2012"
     education:
         - time:             "2009 - 2011"
           location:         "University of Someplace"
