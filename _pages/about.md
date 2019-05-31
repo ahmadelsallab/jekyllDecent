@@ -1,16 +1,16 @@
 ---
 layout:    about
 permalink: "/about"
-author:    jdecent
+author:    asallab
 keywords:  about person demo example
-title:     About Jekyll Decent
-menutitle: About
+title:     Dr. Ahmad El Sallab Biography
+menutitle: Biography
 weight:    90
-excerpt:   This page contains the curriculum vitae (CV) of the author.
+excerpt:   This page contains the Bigraphy of the author.
 --- 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-If you like this theme and like to show your appreciation then please leave a star in the GitHub repository or [buy me a coffee](https://www.paypal.me/jenswillmer/3) - Thank you!
+Ahmad El Sallab is the Senior Chief Engineer of Deep Learning at Valeo Egypt, and Senior Expert at Valeo Group. Ahmad has 14 years of experience in Machine Learning and Deep Learning, where he acquired his M.Sc. and Ph.D. on 2009 and 2013 in the field. He has worked for reputable multi-national organization in the industry since 2005 like Intel and Valeo. He has many publications and book chapters in Deep Learning in top IEEE and ACM journals and conferences, in addition to many patents, with applications in Speech, NLP, Computer Vision and Robotics.
 
 <p class="github-button-container">
 <a class="github-button" href="https://github.com/ahmadelsallab" data-size="large" data-show-count="true" aria-label="Star jwillmer/jekyllDecent on GitHub">ahmadelsallab</a>
