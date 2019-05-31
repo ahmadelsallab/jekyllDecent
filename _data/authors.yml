@@ -23,7 +23,7 @@ default:                                                      # Fallback if noth
   twitch:                                                     # OPTIONAL: used in the about page
   s500px:                                                     # OPTIONAL: used in the about page
   reddit:                                                     # OPTIONAL: used in the about page
-jdecent:
+asallab:
   initial:      asallab
   name:         "Ahmad El Sallab"       
   cover:        /assets/mountain-alternative-cover.jpg  
