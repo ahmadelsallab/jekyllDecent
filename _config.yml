@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server Arocess.
  
 # Site settings
-title:            Ahmad A. Al Sallab
-subtitle:         Dr. Ahmad Al Sallab Personal Page
-description:      This is the jekyllTheme example blog. It only exists to demonstrate how the theme looks and feels.
-keywords:         demo theme example github jekyll features
+title:            Dr. Ahmad El Sallab
+subtitle:         Personal Page
+description:      This is personal page of Dr. Ahmad El Sallab, with his blog, publications and CV.
+keywords:         AI Deep Learning Machine Learning
 language:         "en" # default language of the blog. Language codes: http://www.w3schools.com/tags/ref_language_codes.asp
 
 baseurl:          "/personal" # the subpath of your site, e.g. /blog
