@@ -21,7 +21,7 @@ excerpt:   This page contains the publications of the author.
     <div class="content">
         <ul>
             {% for publication in publications.publications %}
-            <li>{{ publication }}</li>
+            <li><a href={{ publication.link }}>{{ publication.cite }}</a></li>
             {% endfor %}
         </ul>
     </div>
