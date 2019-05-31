@@ -1,0 +1,13 @@
+---
+layout:            post
+title:             "Motor vehicle sensor device having a plurality of sensor units and a plurality of neural networks to produce a combined representation of an environment"
+menutitle:         "Motor vehicle sensor device having a plurality of sensor units and a plurality of neural networks to produce a combined representation of an environment"
+category:          Patents	
+author:            asallab
+tags:              
+---
+
+[Motor vehicle sensor device having a plurality of sensor units and a plurality of neural
+networks to produce a combined representation of an environment, DE102017116017A1](https://patents.google.com/patent/DE102017116017A1/en)
+
+ The invention relates to a method for configuring a vehicle sensor device (2) comprising at least two sensor units (3a, 3b, 3x) and two neural networks (6a, 6b), with a a) multiple sensing (9a, 9b) an environment (4) the vehicle sensor device (2) by a first sensor unit (3a) and by a second sensor unit (3b); b) generating (10a, 10b) of a plurality (of the first sensor information by the first sensor unit 3a) and a plurality of second sensor information (by the second sensor unit 3b); c) multiple defining (11) (of the first sensor training data sets 12a) with one of the generated first sensor information and the second training data sets sensor (12b) each having a second sensor information generated; d) falsification of sensor information of a subset of the first and second training sensor data records (12a, 12b); f) identifying the training sensor data records (12a, 12b) (adulterated with sensory information to be corrupted, and the sensor training data sets 12a, 12b) with undistorted sensor information as genuine; e) providing (13) (to the respective marked first training sensor records 12a) associated with first sensor information to the first neural network (6a) of the motor-vehicle sensor device (2) and (to the respective labeled second training sensor records 12b) associated second sensor information to the second neural network (6b) of the motor-vehicle sensor device (2); f) providing (14) an information on the identification of the respective first and second training sensor data records (12a, 12b) (a teaching instance (15) for the first and the second neural network 6a, 6b); g) training the first neural network (6a) with the provided first sensor information from the respective first training sensor data records (12a) and said second neural network (6b) with the provided second sensor information of the respective second training sensor data records (12b) by means of a monitoring learning algorithm 'for generating a combined representation (16) of the first sensor information and the second sensor information.

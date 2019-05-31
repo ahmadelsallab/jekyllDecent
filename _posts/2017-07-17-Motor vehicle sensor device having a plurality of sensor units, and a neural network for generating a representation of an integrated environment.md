@@ -1,0 +1,13 @@
+---
+layout:            post
+title:             "Motor vehicle sensor device having a plurality of sensor units, and a neural network for generating a representation of a integrated environment"
+menutitle:         "Motor vehicle sensor device having a plurality of sensor units, and a neural network for generating a representation of a integrated environment"
+category:          Patents	
+author:            asallab
+tags:              
+---
+
+[Motor vehicle sensor device having a plurality of sensor units, and a neural network for
+generating a representation of a integrated environment, DE102017116016A1](https://patents.google.com/patent/DE102017116016A1/en)
+
+ The invention relates to a method for configuring a vehicle sensor device (2) comprising at least two sensor units (3a, 3b, 3x), and a neural network (6), (a a) multiple detecting 9a, 9b) of an area (4 ) of the vehicle sensor device (2) (by the first sensor unit 3a) of the motor-vehicle sensor device (2) and (a second sensor unit 3b) of the motor-vehicle sensor device (2); b) generating (10a, 10b) of a plurality (of the first sensor information by the first sensor unit 3a) and a plurality of second sensor information (by the second sensor unit 3b), wherein the sensor information representing the detected ambient each (4); c) multiple combining (11) of one of the generated first sensor information with the generated second sensor information to a respective training set of sensor data (12); e) falsification of sensor information of a subset of the workout sensor data records (12); f) identifying the training sensor data records (12) with adulterated sensor information to be corrupted, and the sensor training data sets (12) with undistorted sensor information as genuine; g) providing (13) (to the respective marked training records sensor 12) Sensor information (to the neural network 6) of the vehicle sensor device (2) associated; f) providing (14) an information on the identification of the respective sensor training data sets (12) to an educational entity (15); and g) training the neural network (6) with the provided sensor information of the respective training sensor data records (12) through the teaching instance (15) by means of a monitoring learning algorithm for generating an integrated representation (16) of the first sensor information and the second sensor information in dependence of the to the neural network (6) provided sensor information in order to improve the processing of sensor information of different sensor units (3a, 3b, 3x) a sensor device (2) in a motor vehicle (1).
