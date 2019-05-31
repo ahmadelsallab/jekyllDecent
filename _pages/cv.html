@@ -15,7 +15,6 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <p>{{cv.profile}}</p>
 </div>
 
-{% assign publications = site.data.publications[page.author]%}
 <div class="md-card shadow">
     <div class="title icon-library">
         <h2>Publications</h2>
@@ -23,7 +22,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="content">
         <ul>
             {% for publication in publications.publications %}
-            <li>{{ publication }}</li>
+            <li><a href={{ publication.link }}>{{ publication.cite }}</a></li>
             {% endfor %}
         </ul>
     </div>
