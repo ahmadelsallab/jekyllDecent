@@ -8,10 +8,10 @@ menutitle: Publications
 weight:    70
 excerpt:   This page contains the publications of the author.
 ---
-{% assign pubs = site.data.publications[page.author] %}
+{% assign publications = site.data.publications[page.author] %}
 
 <div class="md-card no-border">
-    <p>{{pubs.profile}}</p>
+    <p>{{publications.profile}}</p>
 </div>
 
 <div class="md-card shadow">
@@ -20,7 +20,7 @@ excerpt:   This page contains the publications of the author.
     </div>
     <div class="content">
         <ul>
-            {% for publication in pubs.publications %}
+            {% for publication in publications.publications %}
             <li>{{ publication }}</li>
             {% endfor %}
         </ul>
@@ -30,7 +30,7 @@ excerpt:   This page contains the publications of the author.
 
 
 <div class="timeline-container">
-    {% for employment in cv.employment %}
+    {% for employment in publications.employment %}
     <div class="timeline-block">
         <div class="marker"></div>
         <div class="time">{{employment.time}}</div>
