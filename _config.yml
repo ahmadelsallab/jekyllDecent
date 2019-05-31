@@ -3,11 +3,11 @@
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
+# 'jekyll serve'. If you change this file, please restart the server Arocess.
+ 
 # Site settings
-title:            Dr. Ahmad El Sallab
-subtitle:         Personal Page
+title:            Ahmad A. Al Sallab
+subtitle:         Dr. Ahmad Al Sallab Personal Page
 description:      This is the jekyllTheme example blog. It only exists to demonstrate how the theme looks and feels.
 keywords:         demo theme example github jekyll features
 language:         "en" # default language of the blog. Language codes: http://www.w3schools.com/tags/ref_language_codes.asp
