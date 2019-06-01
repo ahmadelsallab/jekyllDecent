@@ -33,11 +33,11 @@ asallab:
           link:
         - cite: "Ahmad A. Al Sallab, Mahmoud Saeed, Omar AbdelTawab, Mohammed Abdo. “Meta learning Framework for Automated Driving”, International Conference on Machine Learning (ICML), Machine Learning in Automated Driving workshop, 4-10 August 2017, Syndey, Australia."
           link:
-        - cite: "Baly R, Badaro G, Hamdi A, Moukalled R, Aoun R, El-Khoury G, Al Sallab A, Hajj H, Habash N, Shaban K, El-Hajj W. OMAM at SemEval-2017 Task 4: Evaluation of English State-of-the-Art Sentiment Analysis Models for Arabic and a New Topic-based Model. InProceedings of the 11th International Workshop on Semantic Evaluation (SemEval-2017). Association for Computational Linguistics, Vancouver, Canada 2017 (pp. 601-608).
+        - cite: "Baly R, Badaro G, Hamdi A, Moukalled R, Aoun R, El-Khoury G, Al Sallab A, Hajj H, Habash N, Shaban K, El-Hajj W. OMAM at SemEval-2017 Task 4: Evaluation of English State-of-the-Art Sentiment Analysis Models for Arabic and a New Topic-based Model. In Proceedings of the 11th International Workshop on Semantic Evaluation (SemEval-2017). Association for Computational Linguistics, Vancouver, Canada 2017 (pp. 601-608)."
           link: 
         - cite: "Khaled ElMadawy, Ahmad A. Al Sallab, Mostafa Gamal, Moemen Abdelrazek, Hesham Eraqi, Jens Honer. “Deep Convolutional Long-Short Term Memory Network for LIDAR Semantic Segmentation”, IEEE 20th International Conference on Intelligent Transportation Systems, Yokohama, Japan, October 16 - 19, 2017."
           link:
-        - cite: "Siam, M., Mahgoub, H., Zahran, M., Yogamani, S., Jagersand, M. and Ahmad A. Al Sallab, “Motion and Appearance Based Multi-Task Learning Network for Autonomous Driving.”, Neural Information Processing Systems (NIPS), Machine Learning in Inetelligent Transportation MLITS workshop, 05 Dec – 10 Dec, 2017, Long Beach, California, USA.
+        - cite: "Siam, M., Mahgoub, H., Zahran, M., Yogamani, S., Jagersand, M. and Ahmad A. Al Sallab, “Motion and Appearance Based Multi-Task Learning Network for Autonomous Driving.”, Neural Information Processing Systems (NIPS), Machine Learning in Inetelligent Transportation MLITS workshop, 05 Dec – 10 Dec, 2017, Long Beach, California, USA."
           link:
         - cite: "Ali, W., Abdelkarim, S., Zahran, M., Zidan, M., & Sallab, A. E. (2018). “YOLO3D: End-to-end real-time 3D Oriented Object Bounding Box Detection from LiDAR Point Cloud”, European Conference on Computer Vision (ECCV), 3D Reconstruction meets Semantics workshop, 8-14 September 2018, Munich, Germany."
           link: 
@@ -45,7 +45,7 @@ asallab:
           link: 
         - cite: "Gilber Badaro, Ramy Baly, Hazem Hajj, Wassim El-Hajj, Khaled Bashir Shaaban, Nizar Habash, Ahmad A. Al Sallab, Ali Hamdi, “A Survey of Opinion Mining in Arabic: A Comprehensive System Perspective Covering Challenges and Advances in Tools, Resources, Models, Applications and Visualizations”, ACM Transactions on Asian and Low Resources Language Information Processing (TALLIP), 2018"
           link:
-        - cite: "Hazem Rashed, Senthil Yogamani, Ahmad El-Sallab, Arindam Das, and Mohamed El-Helw, “Depth augmented Semantic Segmentation networks for Automated Driving”, 11th Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP 2018), December 18 - 22, Hyderabad, India
+        - cite: "Hazem Rashed, Senthil Yogamani, Ahmad El-Sallab, Arindam Das, and Mohamed El-Helw, “Depth augmented Semantic Segmentation networks for Automated Driving”, 11th Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP 2018), December 18 - 22, Hyderabad, India"
           link:
         - cite: "Ahmad A. Al Sallab, Ibrahim Sobh, Mahmoud Zidan, Mohamed Zahran and Sherif Abdelkarim. “YOLO4D: A Spatio-temporal Approach for Real-time Multi-object Detection and Classification from LiDAR Point Clouds.”, Neural Information Processing Systems (NIPS), Machine Learning in Inetelligent Transportation MLITS workshop, 05 Dec – 10 Dec, 2018, Canada"
           link:
