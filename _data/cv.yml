@@ -29,10 +29,34 @@ asallab:
     testimonials:
     
     skills:
-        - "Python, ASP.NET MVC"
-        - "XAML, WPF, LINQ, Silverlight"
-        - "JavaScript, jQuery, HTML5, CSS, LESS"
-        - "Web Services, Active Directory, Windows 10, Windows Phone Apps"
+        programming:
+        codeanalysis:
+        debugging:
+        webscript:
+            - "Python, Perl, PHP"
+            - "SQL, MySQL"
+            - "Django"
+            - "Jekyll"
+            - "JavaScript"
+        cloud:
+            - "JavaScript"
+            - "Floydhub"
+        config:
+        bug:
+        compilers:
+        project:
+        hardware:
+            elec:
+            hdl:
+            micro:
+            fpga:
+        model:
+        linux:
+        rtos:
+        dsp:
+        dl:
+            - "Excellent command of Python, Keras, TensorFlow, Pytorch, Neon, Gluon"
+            - "Excellent command of Docker, NVIDIA tools, AWS and AWS SageMaker deployment process"
     education:
         - time:             "2009 - 2011"
           location:         "University of Someplace"
