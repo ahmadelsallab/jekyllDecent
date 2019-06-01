@@ -1,5 +1,32 @@
 asallab:
     profile: "Ahmad El Sallab is the Senior Chief Engineer of Deep Learning at Valeo Egypt, and Senior Expert at Valeo Group. Ahmad has 14 years of experience in Machine Learning and Deep Learning, where he acquired his M.Sc. and Ph.D. on 2009 and 2013 in the field. He has worked for reputable multi-national organization in the industry since 2005 like Intel and Valeo. He has many publications and book chapters in Deep Learning in top IEEE and ACM journals and conferences, in addition to many patents, with applications in Speech, NLP, Computer Vision and Robotics."
+    
+    personal:
+        name:
+        dob:
+        address:
+        contact:
+        email:
+        gscholar:
+        researchgate:
+        linkdin:
+        website:
+        github:
+        martial:
+    patents:
+    
+    courses:
+    
+    keynotes:
+    
+    conferences:
+    
+    reviewer:
+    phd:
+    msc:
+    
+    testimonials:
+    
     skills:
         - "Python, ASP.NET MVC"
         - "XAML, WPF, LINQ, Silverlight"
