@@ -4,60 +4,60 @@ asallab:
         - cite:  "A. Sallab, H. A. Fahmy, M. Rashwan, “Hardware Implementation of Distributed Speech Recognition System Front-end”, In proceedings of 17th European Signal Processing Conference (EUSIPCO) – Aug. 2009"
           link:  "https://ieeexplore.ieee.org/document/5404138/" 
         - cite:  "A. Sallab, H. A. Fahmy, M. Rashwan “Optimized Hardware Implementation of FFT processor”, In proceedings of 4th International Design and Test Workshop (IDT)- 2009 , Riyadh, Saudi-Arabia"
-          link:
+          link:  "https://ieeexplore.ieee.org/document/5404139" 
         - cite:  "A. Sallab, H. Rashwan “Self Learning Machines using Deep Networks”, in Proceedings of 2011 International Conference of Soft Computing and Pattern Recognition (SoCPaR), pp. 21 – 26, 14-16 Oct. 2011"
-          link: 
+          link:  "https://ieeexplore.ieee.org/document/6089108/"
         - cite:  "A. Sallab, M. Rashwan “E-mail Classification using Deep Networks”, Journal of Theoretical and Applied Information Technology (JATIT), ISSN 1992-8645, pp. 241 – 251, Vol. 37. No. 2 - March, 2012"
-          link: 
+          link:  "http://www.jatit.org/volumes/Vol37No2/12Vol37No2.pdf"
         - cite:  "A. Sallab, M. Rashwan “Adaptation of a deep learning machine to real world data”, International Journal of Computer Information Systems and Industrial Management Applications (IJCISIM), ISSN 2150-7988, pp. 216-226, Vol. 5 – 2013"
-          link: 
+          link:  "https://pdfs.semanticscholar.org/ea99/8cfbd565488efca8a3391045476e8d4b76bc.pdf"
         - cite: "A. Sallab, M. Rashwan, A. Rafea, H.M. Rafaat “Automatic Arabic diacritics restoration based on deep nets”, Arabic NLP workshop, EMNLP 2014: Conference on Empirical Methods in Natural Language Processing, October 25-29, 2014, Doha, Qatar."
-          link: 
+          link: "https://www.aclweb.org/anthology/W14-3608"
         - cite: "A. Sallab, M. Rashwan, A. Rafea, H.M. Rafaat “Deep learning framework with Confused Sub-set Resolution architecture for Automatic Arabic Diacritization”, IEEE/ACM TRANSACTIONS ON AUDIO, SPEECH, AND LANGUAGE PROCESSING, VOL. 23, NO. 3, MARCH 2015"
-          link:
+          link: "https://ieeexplore.ieee.org/document/7050392/"
         - cite: "Ahmad A. Al Sallab, Ramy Baly, Gilbert Badaro, Hazem Hajj, Wassim El Hajj, Khaled Bashir Shaaban “Towards Deep Learning Models for Sentiment Analysis in Arabic”, Machine learning and Data analytics symposium, 8,9 March 2015, Doha, Qatar"
-          link:
+          link: "https://www.researchgate.net/publication/272815706_Towards_Deep_Learning_models_for_sentiment_analysis_in_Arabic"
         - cite: "Ahmad A. Al Sallab, Ramy Baly, Gilbert Badaro, Hazem Hajj, Wassim El Hajj, Khaled Bashir Shaaban “Deep Learning models for sentiment analysis in Arabic”, Arabic NLP workshop, ACL-IJCNLP, The 53rd Annual Meeting of the Association for Computational Linguistics and The 7th International Joint Conference of the Asian Federation of Natural Language Processing, Beijing, China, July 26-31, 2015"
-          link:
+          link: "http://www.aclweb.org/anthology/W15-3202"
         - cite: "Baly, Ramy, Roula Hobeica, Hazem Hajj, Wassim El-Hajj, Khaled Bashir Shaban, and Ahmad Al-Sallab. “A Meta-Framework for Modeling the Human Reading Process in Sentiment Analysis.“ ACM Transactions on Information Systems (TOIS) 35, no. 1 (2016): 7."
-          link:  
+          link: "https://dl.acm.org/citation.cfm?id=2950050"
         - cite: "Sirine Taleb, Ahmad A. Al Sallab, Hazem Hajj, Zaher Dawy, “Deep Learning with Ensemble Classification Method for Sensor Sampling Decisions”, 12th International Wireless Communications & Mobile Computing Conference IWCMC, Cyprus September 2016."
-          link:
+          link: "http://ieeexplore.ieee.org/document/7577043/"
         - cite: "Ahmad A. Al Sallab, Ramy Baly, Gilbert Badaro, Hazem Hajj, Wassim El Hajj, Khaled Bashir Shaaban “AROMA: A Recursive Deep Learning Model for Opinion Mining in Arabic as a Low Resource Language”, ACM Transactions on Asian and Low Resources Language Information Processing (TALLIP), 2017"
-          link: 
+          link: "https://dl.acm.org/citation.cfm?id=3086575"
         - cite: "Magooda, Ahmed, Amr M. Sayed, Ashraf Y. Mahgoub, Hany Ahmed, Mohsen Rashwan, Hazem Raafat, Eslam Kamal, and Ahmad A. Al Sallab. “RDI_Team at SemEval-2016 Task 3: RDI Unsupervised Framework for Text Ranking” Proceedings of SemEval (2016): 822-827."
-          link:
+          link: "https://www.aclweb.org/anthology/S16-1127"
         - cite: "Ahmad A. Al Sallab, Mohammed Abdo, Senthil Yogamani, Etienne Perot. “End to end Deep Reinforcemet learning framework for Lane Keeping Assist”, The Thirtieth Annual Conference on Neural Information Processing Systems (NIPS), Machine Learning in Inetelligent Transportation MLITS workshop, 05 Dec – 10 Dec, 2016, Barcelona Spain."
-          link: 
+          link: "https://arxiv.org/abs/1612.04340"
         - cite: "Ahmad A. Al Sallab, Mohammed Abdo, Senthil Yogamani, Etienne Perot. “Deep reinforcement learning framework for autonomous driving”, Electronic Imaging 2017, Autonomous Vehicles and Machines, 29 Jan – 2 Feb 2017, Burlingame, California USA."
-          link:
+          link: "https://arxiv.org/abs/1704.02532"
         - cite: "Ahmad A. Al Sallab, Mahmoud Saeed, Omar AbdelTawab, Mohammed Abdo. “Meta learning Framework for Automated Driving”, International Conference on Machine Learning (ICML), Machine Learning in Automated Driving workshop, 4-10 August 2017, Syndey, Australia."
-          link:
+          link: "https://arxiv.org/abs/1706.04038"
         - cite: "Baly R, Badaro G, Hamdi A, Moukalled R, Aoun R, El-Khoury G, Al Sallab A, Hajj H, Habash N, Shaban K, El-Hajj W. OMAM at SemEval-2017 Task 4: Evaluation of English State-of-the-Art Sentiment Analysis Models for Arabic and a New Topic-based Model. In Proceedings of the 11th International Workshop on Semantic Evaluation (SemEval-2017). Association for Computational Linguistics, Vancouver, Canada 2017 (pp. 601-608)."
-          link: 
+          link: "https://www.aclweb.org/anthology/S17-2099"
         - cite: "Khaled ElMadawy, Ahmad A. Al Sallab, Mostafa Gamal, Moemen Abdelrazek, Hesham Eraqi, Jens Honer. “Deep Convolutional Long-Short Term Memory Network for LIDAR Semantic Segmentation”, IEEE 20th International Conference on Intelligent Transportation Systems, Yokohama, Japan, October 16 - 19, 2017."
-          link:
+          link: "https://www.researchgate.net/publication/320812046_Deep_Convolution_Long-Short_Term_Memory_Network_for_LIDAR_Semantic_Segmentation"
         - cite: "Siam, M., Mahgoub, H., Zahran, M., Yogamani, S., Jagersand, M. and Ahmad A. Al Sallab, “Motion and Appearance Based Multi-Task Learning Network for Autonomous Driving.”, Neural Information Processing Systems (NIPS), Machine Learning in Inetelligent Transportation MLITS workshop, 05 Dec – 10 Dec, 2017, Long Beach, California, USA."
-          link:
+          link: "https://openreview.net/pdf?id=Bk4BBBLRZ"
         - cite: "Ali, W., Abdelkarim, S., Zahran, M., Zidan, M., & Sallab, A. E. (2018). “YOLO3D: End-to-end real-time 3D Oriented Object Bounding Box Detection from LiDAR Point Cloud”, European Conference on Computer Vision (ECCV), 3D Reconstruction meets Semantics workshop, 8-14 September 2018, Munich, Germany."
-          link: 
+          link: "https://arxiv.org/abs/1808.02350"
         - cite: "Siam, M., Mahgoub, H., Zahran, M., Yogamani, S., Jagersand, M. and Ahmad A. Al Sallab, “MODNet: Moving Object Detection Network with Motion and Appearance for Autonomous Driving”, The 21st IEEE International Conference on Intelligent Transportation Systems, November 4-7, 2018 , Maui, Hawaii, USA"
-          link: 
+          link: "https://arxiv.org/abs/1709.04821"
         - cite: "Gilber Badaro, Ramy Baly, Hazem Hajj, Wassim El-Hajj, Khaled Bashir Shaaban, Nizar Habash, Ahmad A. Al Sallab, Ali Hamdi, “A Survey of Opinion Mining in Arabic: A Comprehensive System Perspective Covering Challenges and Advances in Tools, Resources, Models, Applications and Visualizations”, ACM Transactions on Asian and Low Resources Language Information Processing (TALLIP), 2018"
-          link:
+          link: "https://dl.acm.org/citation.cfm?id=3295662"
         - cite: "Hazem Rashed, Senthil Yogamani, Ahmad El-Sallab, Arindam Das, and Mohamed El-Helw, “Depth augmented Semantic Segmentation networks for Automated Driving”, 11th Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP 2018), December 18 - 22, Hyderabad, India"
-          link:
+          link: "http://www.insticc.org/Primoris/Resources/PaperPdf.ashx?idPaper=72483"
         - cite: "Ahmad A. Al Sallab, Ibrahim Sobh, Mahmoud Zidan, Mohamed Zahran and Sherif Abdelkarim. “YOLO4D: A Spatio-temporal Approach for Real-time Multi-object Detection and Classification from LiDAR Point Clouds.”, Neural Information Processing Systems (NIPS), Machine Learning in Inetelligent Transportation MLITS workshop, 05 Dec – 10 Dec, 2018, Canada"
-          link:
+          link: "https://openreview.net/forum?id=B1xWZic29m"
         - cite: "Ahmad A. Al Sallab, Ibrahim Sobh, Khaled El Medawy, Loay Amin, Mahmoud Gamal, Mostafa Gamal, Omar Abdeltawab and Sherif Abdelkarim. “End-To-End Multi-Modal Sensors Fusion System For Urban Automated Driving.”, Neural Information Processing Systems (NIPS), Machine Learning in Inetelligent Transportation MLITS workshop, 05 Dec – 10 Dec, 2018, Canada"
-          link:
+          link: "https://openreview.net/pdf?id=Byx4Xkqjcm"
         - cite: "Rashed, Hazem, Senthil Yogamani, Ahmad El-Sallab, Pavel Krizek, and Mohamed El-Helw. “Optical Flow augmented Semantic Segmentation networks for Automated Driving.” arXiv preprint arXiv:1901.07355 (2019)"
-          link:
+          link: "http://arxiv.org/abs/1901.07355"
         - cite: "Talpaert, Victor, Ibrahim Sobh, B. Ravi Kiran, Patrick Mannion, Senthil Yogamani, Ahmad El-Sallab, and Patrick Perez. “Exploring applications of deep reinforcement learning for real-world autonomous driving systems.” arXiv preprint arXiv:1901.01536 (2019)"
-          link: 
+          link: "https://arxiv.org/abs/1901.01536"
         - cite: "Hazem Rashed, Senthil Yogamani, Ahmad A. Al Sallab, “Deep Semantic Segmentation in Autonomous Driving” Book chapter in Deep Learning in Computer Vision (DLCV) 2019, IEEE book"
           link:
         - cite: "Mohammed Abou Ahmad El-Sallab, “End-to-End 3D-PointCloud Semantic Segmentation for Autonomous Driving”,2019 IEEE Intelligent Vehicles Symposium (IV) (IV2019), June 9-12, 2019, in Paris, France."
           link:
         - cite: "Ahmad El Sallab, Ibrahim Sobh, Mohamed Zahran, Nader Essam, “LiDAR Sensor modeling and Data augmentationwith GANs for Autonomous driving”, Proceedings of the 36th International Conference on MachineLearning (ICML), 2019, Long Beach, California."
-          link:
+          link: "https://arxiv.org/abs/1905.07290"
