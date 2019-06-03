@@ -204,7 +204,13 @@ Following graduation, I immediately asked Eng. El Sallab to join SySDSoft, where
             project:
                 - "Solid knowledge and practice of Agile and Scrum methodologies"
                 - "MS Project"
-                - "PSNext by Serena"
+                    - "PSNext by Serena"
+            rtos:
+                - "Inter-Task communication"
+                - "Memory management techniqes"
+                - "Multi-threading and thread priority"
+                - "Byte Ordering (little- big endianess)"
+                - "Application of all the above on eCos RTOS"                 
             
         hardware:
             tools:
@@ -224,7 +230,11 @@ Following graduation, I immediately asked Eng. El Sallab to join SySDSoft, where
                 - "Familiar with Atmel"
                 - "Familiar with PIC"
                 - "Familiar with ARM and related debugging and development tools"
-                - "Familiar with Renesas / Hitachi"                       
+                - "Familiar with Renesas / Hitachi"  
+            dsp:
+                - "Working on digital filters design using MATLAB"
+                - "Good experience with Texas Instruments DSP Kit (C500, C600 Series) using Simulink"
+                - "Familiar with Code Composer Studio"                
         model:
             - "Excellent knowledge MATLAB"
             - "Fair knowledge of Simulink"
@@ -233,16 +243,8 @@ Following graduation, I immediately asked Eng. El Sallab to join SySDSoft, where
         linux:
             - "Familiar with development under Ubuntu, Madriva, Red Hat, Fedora and SUSE Linux"
             - "Good knowledge of shell-scripting"        
-        rtos:
-            - "Inter-Task communication"
-            - "Memory management techniqes"
-            - "Multi-threading and thread priority"
-            - "Byte Ordering (little- big endianess)"
-            - "Application of all the above on eCos RTOS"    
-        dsp:
-            - "Working on digital filters design using MATLAB"
-            - "Good experience with Texas Instruments DSP Kit (C500, C600 Series) using Simulink"
-            - "Familiar with Code Composer Studio"
+   
+
     languages:
         - lang: "Arabic"
           level: "Mother tongue"
