@@ -38,11 +38,16 @@ asallab:
           description:      "General Certificate of Secondary Education with grade 98%"        
                   
     patents:
-        - "Motor vehicle sensor device having a plurality of sensor units, and a neural network for generating a representation of a integrated environment, DE102017116016A1"
-        - "Motor vehicle sensor device having a plurality of sensor units and a plurality of neural networks to produce a combined representation of an environment, DE102017116017A1"
-        - "Locating an object in an environment of a motor vehicle by means of an ultrasonic sensor system, DE102017101476B3"
-        - "8 Total patents drafts (pending publication)"
-        - "Top innovator award, Valeo Egypt, 2019"
+        - title: "Motor vehicle sensor device having a plurality of sensor units, and a neural network for generating a representation of a integrated environment, DE102017116016A1"
+          link: "https://patents.google.com/patent/DE102017116016A1/en"
+        - title: "Motor vehicle sensor device having a plurality of sensor units and a plurality of neural networks to produce a combined representation of an environment, DE102017116017A1"
+          link: "https://patents.google.com/patent/DE102017116017A1/en"
+        - title: "Locating an object in an environment of a motor vehicle by means of an ultrasonic sensor system, DE102017101476B3"
+          link:  "https://patents.google.com/patent/DE102017101476B3/en"
+        - title: "8 Total patents drafts (pending publication)"
+          link: ""
+        - title: "Top innovator award, Valeo Egypt, 2019"
+          link: ""
     
     courses:
         - "Practical Deep Learning, ITI Mechatronics Diploma, for 14 engineers, 14 lectures"
