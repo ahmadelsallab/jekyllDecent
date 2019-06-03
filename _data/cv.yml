@@ -21,22 +21,22 @@ asallab:
 
     education:
         - time:             "2010 - 2013"
+          certificate:      "Ph.D. in Electronics and Communications, Computer Electronics, Artificial Intelligence and Machine learning specialization"
           location:         "Electronics and communications department, Faculty of Engineering, Cairo University"
-          description:      "Ph.D. in Electronics and Communications, Computer Electronics, Artificial Intelligence and Machine learning specialization, Cairo University
-          Best PhD thesis award from the ELC department, Faculty of Engineering, Cairo University"
+          description:      "Best PhD thesis award from the ELC department, Faculty of Engineering, Cairo University"
         - time:             "2005 - 2009"
+          certificate:      "M. Sc. in Electronics and Communications, Computer Electronics major"
           location:         "Electronics and communications department, Faculty of Engineering, Cairo University"
-          description:      "M. Sc. in Electronics and Communications, Computer Electronics major, Cairo University
-          Ranked the second in pre masters"          
+          description:      "Ranked the second in pre masters (top 2%)"          
         - time:             "2000 – 2005"
+          certificate:      "B.Sc. in Electronics and Communication"
           location:         "Electronics and communications department, Faculty of Engineering, Cairo University"
-          description:      "B.Sc. in Electronics and Communication, Cairo University 
-                             Graduation grade: Distinction with honorary degree, ranked the fifteenth
+          description:      "Graduation grade: Distinction with honorary degree, ranked the fifteenth (top 3%)
                              Graduation project grade: distinction"          
         - time:             "1997 - 2000"
+          certificate:      "General Certificate of Secondary Education"
           location:         "High school: El Kawmya Language School"
-          description:      "General Certificate of Secondary Education with grade 98%"        
-                  
+          description:      "Grade 98%"                          
     patents:
         - title: "Motor vehicle sensor device having a plurality of sensor units, and a neural network for generating a representation of a integrated environment, DE102017116016A1"
           link: "https://patents.google.com/patent/DE102017116016A1/en"
