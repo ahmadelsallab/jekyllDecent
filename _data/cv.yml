@@ -597,3 +597,10 @@ Following graduation, I immediately asked Eng. El Sallab to join SySDSoft, where
             - " Broadcast Multi-Cast Protocol Suite (BCMCS)"
             - " Test Application Protocol (TAP)"
             - " Route Update Protocol (RUP)" 
+        - time:             "2004-2005"
+          team:             "B.Sc. Graduation Project: Team of 5"
+          title:            "Robocon 2005: Team of Autonomous and Manual Robots"
+          technologies:     "C/C++"
+          responsibilities:
+            - "A team of 2 Autonomous robots and 1 Manual robot. The autonomous robots mission to collect balls from dedicated area, with the color of the team (blue/red), and place those balls in elevated baskets (beacons) that are distributed across a court. The central beacon is internally divided into 3 colors, and the robot shall put the ball in its corresponding color section, with an extra color (Green) for bonus points. The Manual robot mission is to collect the balls and slide them to a whole in the ground.
+            - "First time for Cairo University in Robocon"
