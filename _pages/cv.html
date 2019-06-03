@@ -253,7 +253,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 <h2 class="employment-heading">Soft skills</h2>
 <div class="md-card shadow">
     <div class="title icon-stats-bars">
-        <h2>Soft Skills</h2>
+        <h2>Trainings attended</h2>
     </div>
     <div class="content">
         <ul>
@@ -277,7 +277,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     </div>
 </div>
 
-<h2 class="employment-heading">Soft skills</h2>
+<h2 class="employment-heading">Technical Skills and Tools</h2>
 <div class="md-card shadow">
     <div class="title icon-stats-bars">
         <h2>Deep Learning and Machine Learning</h2>
@@ -297,6 +297,15 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         </ul>
         
     </div>
+    <div class="title icon-stats-bars">
+        <h2>Computer Vision Tools</h2>
+    </div>
+    <div class="content">
+        <ul>
+            {% for skill in cv.skillscv %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+    </div>    
     
 </div>
 
