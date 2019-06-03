@@ -54,6 +54,28 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     </div>
 </div>
 
+<h2 class="employment-heading">Employment History</h2>
+
+<div class="timeline-container">
+    {% for employment in cv.employment %}
+    <div class="timeline-block">
+        <div class="marker"></div>
+        <div class="time">{{employment.time}}</div>
+        <div class="timeline-content">
+            <div class="time">{{employment.time}}</div>
+            <h3>{{employment.position}}</h3>
+            <span>{{employment.company}} ({{employment.location}})</span>
+            <ul>
+                {% for responsibility in employment.responsibilities %}
+                <li>{{responsibility}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
 <div class="md-card shadow education">
     <div class="title icon-library">
         <h2>Education</h2>
@@ -62,12 +84,14 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <dl>
         <dt class="time">{{entry.time}}</dt>
         <dd>
+            <h3>{{entry.certificate}}</h3>
             <h3>{{entry.location}}</h3>
-            <p>{{entry.description}}</p>
+            <p><b>{{entry.description}}</b></p>
         </dd>
     </dl>
     {% endfor %}
 </div>
+
 
 {% assign publications = site.data.publications[page.author] %}
 
@@ -209,26 +233,6 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     </div>
 </div>
 
-<h2 class="employment-heading">Employment History</h2>
-
-<div class="timeline-container">
-    {% for employment in cv.employment %}
-    <div class="timeline-block">
-        <div class="marker"></div>
-        <div class="time">{{employment.time}}</div>
-        <div class="timeline-content">
-            <div class="time">{{employment.time}}</div>
-            <h3>{{employment.position}}</h3>
-            <span>{{employment.company}} ({{employment.location}})</span>
-            <ul>
-                {% for responsibility in employment.responsibilities %}
-                <li>{{responsibility}}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-    {% endfor %}
-</div>
 
 <h2 class="project-heading">Project History</h2>
 
