@@ -14,6 +14,11 @@ asallab:
         github: "https://github.com/ahmadelsallab"
         martial: "Married"
         military: "Exempted"
+    currentoccupation:
+        - "Senior Expert of AI, Valeo Group"
+        - "R&D Community Manager of Valeo AI and Machine Learning"
+        - "Senior Chief and Head of Valeo Egypt AI research team"
+
     education:
         - time:             "2010 - 2013"
           location:         "Electronics and communications department, Faculty of Engineering, Cairo University"
