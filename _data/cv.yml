@@ -436,13 +436,6 @@ Following graduation, I immediately asked Eng. El Sallab to join SySDSoft, where
           responsibilities:
             - "Lead PI"
             - "Ahmad A. Al Sallab, Ibrahim Sobh, Khaled El Medawy, Loay Amin, Mahmoud Gamal, Mostafa Gamal, Omar Abdeltawab and Sherif Abdelkarim. “End-To-End Multi-Modal Sensors Fusion System For Urban Automated Driving.”, Neural Information Processing Systems (NIPS), Machine Learning in Inetelligent Transportation MLITS workshop, 05 Dec – 10 Dec, 2018, Canada" 
-        - time:             "2018"
-          team:             "Valeo AI: Team of 6"
-          title:            "End-to-end automated driving Conditional imitation Learning, from fusion of LiDAR + Camera"
-          technologies:     "Deep Learning, Deep Reinforcement Learning, CARLA, Conditional Imitiation Learning, TensorFlow, Keras, NVIDIA Jetson"
-          responsibilities:
-            - "Lead PI"
-            - "Ahmad A. Al Sallab, Ibrahim Sobh, Khaled El Medawy, Loay Amin, Mahmoud Gamal, Mostafa Gamal, Omar Abdeltawab and Sherif Abdelkarim. “End-To-End Multi-Modal Sensors Fusion System For Urban Automated Driving.”, Neural Information Processing Systems (NIPS), Machine Learning in Inetelligent Transportation MLITS workshop, 05 Dec – 10 Dec, 2018, Canada"   
         - time:             "2017"
           team:             "Valeo AI: Team of 6"
           title:            "End-to-end automated driving with Meta learning"
