@@ -306,21 +306,132 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
             <li>{{ skill }}</li>
             {% endfor %}
     </div>    
-    
-</div>
-    
-<div class="md-card shadow">
     <div class="title icon-stats-bars">
-        <h2>Computer Vision Tools</h2>
+        <h2>Software Skills</h2>
+    </div>
+    <div class="content">
+        <h3>Programming Languages and IDEs</h3>
+        <ul>
+            {% for skill in cv.skills.software.programming %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+        <h3>Web</h3>
+        <ul>
+            {% for skill in cv.skills.software.web %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>    
+        <h3>Scripting Languages</h3>
+        <ul>
+            {% for skill in cv.skills.software.script %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>  
+        <h3>Code Analysis tools</h3>
+        <ul>
+            {% for skill in cv.skills.software.codeanalysis %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>   
+        <h3>Debugging tools</h3>
+        <ul>
+            {% for skill in cv.skills.software.debugging %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul> 
+        <h3>Configuration Management tools</h3>
+        <ul>
+            {% for skill in cv.skills.software.config %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+        <h3>Bug tracking systems</h3>
+        <ul>
+            {% for skill in cv.skills.software.bug %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+        <h3>Compilers</h3>
+        <ul>
+            {% for skill in cv.skills.software.compilers %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul> 
+        <h3>Real-Time Operating Systems (RTOS)</h3>
+        <ul>
+            {% for skill in cv.skills.software.rtos %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>         
+        <h3>Project Management</h3>
+        <ul>
+            {% for skill in cv.skills.software.project %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>         
+    </div>   
+    <div class="title icon-stats-bars">
+        <h2>Hardware Skills</h2>
+    </div>
+    <div class="content">
+        <h3>Electronics</h3>
+        <ul>
+            {% for skill in cv.skills.hardware.elec %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+        <h3>Hardware Design Languages (HDLs)</h3>
+        <ul>
+            {% for skill in cv.skills.hardware.hdl %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul> 
+        <h3>Micro controllers and Micro processors</h3>
+        <ul>
+            {% for skill in cv.skills.hardware.micro %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>  
+        <h3>Digital Signal Processors (DSP)</h3>
+        <ul>
+            {% for skill in cv.skills.hardware.dsp %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>       
+        <h3>Hardware testing tools</h3>
+        <ul>
+            {% for skill in cv.skills.hardware.tools %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>         
+        
+    </div>     
+    <div class="title icon-stats-bars">
+        <h2>System Design and Modeling</h2>
     </div>
     <div class="content">
         <ul>
-            {% for skill in cv.skills.cv %}
+            {% for skill in cv.skills.model %}
             <li>{{ skill }}</li>
             {% endfor %}
-    </div>    
+        </ul>     
+        
+    </div> 
+    <div class="title icon-stats-bars">
+        <h2>Linux</h2>
+    </div>
+    <div class="content">
+        <ul>
+            {% for skill in cv.skills.linux %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>     
+        
+    </div>          
+</div>
     
-</div>    
+  
 
 
 
