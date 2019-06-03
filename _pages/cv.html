@@ -250,17 +250,54 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     </div>
 </div>
 
+<h2 class="employment-heading">Soft skills</h2>
 <div class="md-card shadow">
     <div class="title icon-stats-bars">
-        <h2>Skills</h2>
+        <h2>Soft Skills</h2>
     </div>
     <div class="content">
         <ul>
-            {% for skill in cv.skills %}
-            <li>{{ skill }}</li>
+            {% for skill in cv.softskills %}
+            <li><b>{{ skill.training }}</b> | {{ skill.year }} | {{ skill.provider }}</li>
             {% endfor %}
         </ul>
     </div>
+</div>
+
+<div class="md-card shadow">
+    <div class="title icon-stats-bars">
+        <h2>Languages</h2>
+    </div>
+    <div class="content">
+        <ul>
+            {% for lang in cv.languages %}
+            <li><b> {{ lang.lang }} : </b>{{ lang.level }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<h2 class="employment-heading">Soft skills</h2>
+<div class="md-card shadow">
+    <div class="title icon-stats-bars">
+        <h2>Deep Learning and Machine Learning</h2>
+    </div>
+    <div class="content">
+        <h3>Frameworks</h3>
+        <ul>
+            {% for skill in cv.skills.dl.frameworks %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+        <h3>Cloud and Tools</h3>
+        <ul>
+            {% for skill in cv.skills.dl.cloud %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+        
+    </div>
+    
 </div>
 
 
