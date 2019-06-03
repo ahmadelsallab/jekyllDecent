@@ -40,6 +40,18 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     </div>
 </div>
 
+<h2 class="employment-heading">Current Occupation</h2>
+
+<div class="md-card shadow">
+    <div class="content">
+        <ul>
+            {% for occ in cv.personal.currentoccupation %}
+            <li><b> {{ occ }}</b></li>
+            {% endfor %}
+            
+        </ul>
+    </div>
+</div>
 
 {% assign publications = site.data.publications[page.author] %}
 
