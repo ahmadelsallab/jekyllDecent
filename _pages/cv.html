@@ -54,6 +54,23 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     </div>
 </div>
 
+<div class="md-card shadow education">
+    <div class="title icon-library">
+        <h2>Education</h2>
+    </div>
+    {% for entry in cv.education %}   
+    <dl>
+        <dt class="time">{{entry.time}}</dt>
+        <dd>
+            <h3>{{entry.certificate}}</h3>
+            <p>{{entry.location}}</p>
+            <p><b>{{entry.description}}</b></p>
+        </dd>
+    </dl>
+    {% endfor %}
+</div>
+
+
 <h2 class="employment-heading">Employment History</h2>
 
 <div class="timeline-container">
@@ -76,21 +93,6 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 </div>
 
 
-<div class="md-card shadow education">
-    <div class="title icon-library">
-        <h2>Education</h2>
-    </div>
-    {% for entry in cv.education %}   
-    <dl>
-        <dt class="time">{{entry.time}}</dt>
-        <dd>
-            <h3>{{entry.certificate}}</h3>
-            <p>{{entry.location}}</p>
-            <p><b>{{entry.description}}</b></p>
-        </dd>
-    </dl>
-    {% endfor %}
-</div>
 
 
 {% assign publications = site.data.publications[page.author] %}
