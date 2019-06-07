@@ -72,9 +72,10 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 
 
 <h2 class="employment-heading">Employment History</h2>
+<div><button onclick="toggle_visibility('emp');">+</button></div>
 
 <div id="emp" class="timeline-container">
-    <button onclick="toggle_visibility('emp');">+</button>
+    
     {% for employment in cv.employment %}
     <div class="timeline-block">
         <div class="marker"></div>
@@ -105,7 +106,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         
     </div>
     <!--a onclick="toggle_visibility('pubs');">+</a-->
-    <button class="expand" onclick="toggle_visibility('pubs');"></button>
+    <button class="go-to-top" onclick="toggle_visibility('pubs');"></button>
     
     <div id="pubs" class="content" style="display:none;">
         
