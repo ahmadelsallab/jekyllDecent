@@ -101,7 +101,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-library">
         <h2>Publications</h2>
     </div>
-    <div class="content">
+    <div class="content" data-role="collapsible">
         <ul>
             {% for publication in publications.publications %}
             <li><a href={{ publication.link }}>{{ publication.cite }}</a></li>
