@@ -358,7 +358,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         <h2>Software Skills</h2>
     </div>
     <button onclick="toggle_visibility('soft_prog');">...</button>   
-    <p id="soft_prog" class="content" style="display:none;">
+    <div id="soft_prog" class="content" style="display:none;">
         <h3>Programming Languages and IDEs</h3>
         <ul>
             {% for skill in cv.skills.software.programming %}
@@ -419,7 +419,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
             <li>{{ skill }}</li>
             {% endfor %}
         </ul>         
-    </p>   
+    </div>   
     <div class="title icon-stats-bars">
         <h2>Hardware Skills</h2>
     </div>
