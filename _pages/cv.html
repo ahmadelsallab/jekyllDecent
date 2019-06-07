@@ -313,12 +313,12 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 </div>
 
 <h2 class="employment-heading">Technical Skills and Tools</h2>
-<button onclick="toggle_visibility('techskills');">...</button>
+<!--button onclick="toggle_visibility('techskills');">...</button-->
 <div id="techskills" class="md-card shadow">
     <div class="title icon-stats-bars">
         <h2>Deep Learning and Machine Learning</h2>
     </div>
-    <!--button onclick="toggle_visibility('dl');">...</button-->
+    <button onclick="toggle_visibility('dl');">...</button>
     <div id="dl" class="content" style="display:none;">
         <h3>Frameworks</h3>
         <ul>
@@ -337,7 +337,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>Computer Vision Tools</h2>
     </div>
-    <!--button onclick="toggle_visibility('cv');">...</button-->
+    <button onclick="toggle_visibility('cv');">...</button>
     <div id="cv" class="content" style="display:none;">
         <ul>
             {% for skill in cv.skills.cv %}
@@ -347,7 +347,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>Natural Language Processing</h2>
     </div>
-    <!--button onclick="toggle_visibility('nlp');">...</button-->
+    <button onclick="toggle_visibility('nlp');">...</button>
     <div id="nlp" class="content" style="display:none;">
         <ul>
             {% for skill in cv.skills.nlp %}
@@ -357,8 +357,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>Software Skills</h2>
     </div>
-    <!--button onclick="toggle_visibility('soft');">...</button-->   
-    <div id="soft" class="content" style="display:none;>
+    <button onclick="toggle_visibility('soft_prog');">...</button>   
+    <div id="soft_prog" class="content" style="display:none;>
         <h3>Programming Languages and IDEs</h3>
         <ul>
             {% for skill in cv.skills.software.programming %}
@@ -423,7 +423,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>Hardware Skills</h2>
     </div>
-    <!--button onclick="toggle_visibility('hard');">...</button-->    
+    <button onclick="toggle_visibility('hard');">...</button>    
     <div id="hard" class="content" style="display:none;>
         <h3>Electronics</h3>
         <ul>
@@ -460,7 +460,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>System Design and Modeling</h2>
     </div>
-    <!--button onclick="toggle_visibility('sys');">...</button-->    
+    <button onclick="toggle_visibility('sys');">...</button>    
     <div id="sys" class="content" style="display:none;>
         <ul>
             {% for skill in cv.skills.model %}
@@ -472,7 +472,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>Linux</h2>
     </div>
-    <!--button onclick="toggle_visibility('linux');">...</button-->                                         
+    <button onclick="toggle_visibility('linux');">...</button>                                         
     <div id="linux" class="content">
         <ul>
             {% for skill in cv.skills.linux %}
