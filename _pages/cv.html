@@ -97,14 +97,14 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 
 {% assign publications = site.data.publications[page.author] %}
 
-<!--div class="md-card shadow"  data-role="collapsible"-->
-<div class="md-card shadow">
+<div class="md-card shadow"  data-role="collapsible">
+<!--div class="md-card shadow"-->
     <div class="title icon-library">
         <h2>Publications</h2>
     </div>
     <div class="content">
-        <!--ul data-role="listview"-->
-        <ul>
+        <ul data-role="listview">
+        <!--ul-->
             {% for publication in publications.publications %}
             <li><a href={{ publication.link }}>{{ publication.cite }}</a></li>
             {% endfor %}
