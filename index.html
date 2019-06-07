@@ -9,9 +9,7 @@ layout: default
 {% endif %}
 
 <section class="author-profile" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    {%  if author.cover %}
-    <div class="author-cover image-bg" style="background-image: url('{{author.cover | absolute_url }}')"></div>
-    {% endif %}
+
 
     {%  if author.picture %}
     <figure class="author-image  {%  if author.cover %} has-cover  {% endif %}">
