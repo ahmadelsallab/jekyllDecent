@@ -2,8 +2,8 @@
 layout: default
 ---
 
-{% if site.data.authors and site.data.authors[page.author] %}
-{% assign author = site.data.authors[page.author] %}
+{% if site.data.authors and site.data.authors[site.author] %}
+{% assign author = site.data.authors[site.author] %}
 {% elsif site.data.authors %}
 {% assign author = site.data.authors[0] %}
 {% endif %}
