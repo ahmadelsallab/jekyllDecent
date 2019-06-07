@@ -148,6 +148,8 @@ Following graduation, I immediately asked Eng. El Sallab to join SySDSoft, where
         cv:
             - "Excellent command of OpenCV"
             - "Excellent command of OCR tesseract"
+        nlp:
+            - "Excellent command of NLP toolkits: spaCy, nltk, Stanford NLP tools"            
         software:
             programming:
                 - "Solid knowledge of object oriented programming concepts"                
