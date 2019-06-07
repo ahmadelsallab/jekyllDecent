@@ -135,7 +135,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-library">
         <h2>Conferences</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('confs');">...</button>
+    <div id="confs" class="content">
         <ul>
             {% for conf in cv.conferences %}
             <li>{{ conf }}</li>
@@ -149,7 +150,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-library">
         <h2>Journals and Conferences reviewer</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('revs');">...</button>
+    <div id="revs" class="content">
         <ul>
             {% for rev in cv.reviewer %}
             <li>{{ rev }}</li>
@@ -162,7 +164,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-library">
         <h2>Conferences session sharing and co-organization</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('coorgs');">...</button>
+    <div id="coorgs" class="content">
         <ul>
             {% for org in cv.coorg %}
             <li>{{ org }}</li>
@@ -175,7 +178,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-library">
         <h2>Teaching Lectures and Courses</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('courses');">...</button>
+    <div id="courses" class="content">
         <ul>
             {% for course in cv.courses %}
             <li>{{ course }}</li>
@@ -188,7 +192,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-library">
         <h2>Keynote and invited talks</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('talks');">...</button>
+    <div id="talks" class="content">
         <ul>
             {% for keynote in cv.keynotes %}
             <li><a href={{ keynote.link }}>{{ keynote.event }}</a></li>
@@ -233,7 +238,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 <h2 class="employment-heading">Recommendations and Testimonials</h2>
 
 <div class="md-card shadow">
-    <div class="content">
+    <button onclick="toggle_visibility('recos');">...</button>
+    <div id="recos" class="content">
         <ul>
             {% for test in cv.testimonials %}
             <li><b> {{ test }}</b></li>
@@ -254,7 +260,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     </div>
     <div class="content">
         <h2>{{project.title}}</h2>
-        <ul>
+        <button onclick="toggle_visibility('proj');">...</button>
+        <ul id="proj">
             {% for responsibility in project.responsibilities %}
             <li>{{responsibility}}</li>
             {% endfor %}
@@ -278,7 +285,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>Trainings attended</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('train');">...</button>
+    <div id="train" class="content">
         <ul>
             {% for skill in cv.softskills %}
             <li><b>{{ skill.training }}</b> | {{ skill.year }} | {{ skill.provider }}</li>
@@ -291,7 +299,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>Languages</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('langs');">...</button>
+    <div id="langs" class="content">
         <ul>
             {% for lang in cv.languages %}
             <li><b> {{ lang.lang }} : </b>{{ lang.level }}</li>
@@ -305,7 +314,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>Deep Learning and Machine Learning</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('dl');">...</button>
+    <div id="dl" class="content">
         <h3>Frameworks</h3>
         <ul>
             {% for skill in cv.skills.dl.frameworks %}
@@ -323,7 +333,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>Computer Vision Tools</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('cv');">...</button>
+    <div id="cv" class="content">
         <ul>
             {% for skill in cv.skills.cv %}
             <li>{{ skill }}</li>
@@ -332,7 +343,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>Software Skills</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('soft');">...</button>   
+    <div id="soft" class="content">
         <h3>Programming Languages and IDEs</h3>
         <ul>
             {% for skill in cv.skills.software.programming %}
@@ -397,7 +409,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>Hardware Skills</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('hard');">...</button>    
+    <div id="hard" class="content">
         <h3>Electronics</h3>
         <ul>
             {% for skill in cv.skills.hardware.elec %}
@@ -433,7 +446,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>System Design and Modeling</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('sys');">...</button>    
+    <div id="sys" class="content">
         <ul>
             {% for skill in cv.skills.model %}
             <li>{{ skill }}</li>
