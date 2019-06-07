@@ -122,7 +122,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-library">
         <h2>Patents</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('pats');">...</button>
+    <div id="pats" class="content"  style="display:none;">
         <ul>
             {% for patent in cv.patents %}
             <li><a href={{ patent.link }}>{{ patent.title }}</a></li>
@@ -136,7 +137,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         <h2>Conferences</h2>
     </div>
     <button onclick="toggle_visibility('confs');">...</button>
-    <div id="confs" class="content">
+    <div id="confs" class="content"  style="display:none;">
         <ul>
             {% for conf in cv.conferences %}
             <li>{{ conf }}</li>
@@ -151,7 +152,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         <h2>Journals and Conferences reviewer</h2>
     </div>
     <button onclick="toggle_visibility('revs');">...</button>
-    <div id="revs" class="content">
+    <div id="revs" class="content"  style="display:none;">
         <ul>
             {% for rev in cv.reviewer %}
             <li>{{ rev }}</li>
@@ -165,7 +166,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         <h2>Conferences session sharing and co-organization</h2>
     </div>
     <button onclick="toggle_visibility('coorgs');">...</button>
-    <div id="coorgs" class="content">
+    <div id="coorgs" class="content"  style="display:none;">
         <ul>
             {% for org in cv.coorg %}
             <li>{{ org }}</li>
@@ -179,7 +180,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         <h2>Teaching Lectures and Courses</h2>
     </div>
     <button onclick="toggle_visibility('courses');">...</button>
-    <div id="courses" class="content">
+    <div id="courses" class="content"  style="display:none;">
         <ul>
             {% for course in cv.courses %}
             <li>{{ course }}</li>
@@ -193,7 +194,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         <h2>Keynote and invited talks</h2>
     </div>
     <button onclick="toggle_visibility('talks');">...</button>
-    <div id="talks" class="content">
+    <div id="talks" class="content"  style="display:none;">
         <ul>
             {% for keynote in cv.keynotes %}
             <li><a href={{ keynote.link }}>{{ keynote.event }}</a></li>
@@ -239,7 +240,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 
 <div class="md-card shadow">
     <button onclick="toggle_visibility('recos');">...</button>
-    <div id="recos" class="content">
+    <div id="recos" class="content"  style="display:none;">
         <ul>
             {% for test in cv.testimonials %}
             <li><b> {{ test }}</b></li>
@@ -250,8 +251,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 </div>
 
 
-<h2 class="project-heading">Project History</h2>
-
+<h2 class="project-heading">Projects History</h2>
+{% assign counter = 0 %}
 {% for project in cv.projects %}
 <div class="md-card shadow project">
     <div class="meta">
@@ -260,8 +261,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     </div>
     <div class="content">
         <h2>{{project.title}}</h2>
-        <button onclick="toggle_visibility('proj');">...</button>
-        <ul id="proj">
+        <button onclick="toggle_visibility('proj_'{{counter}});">...</button>
+        <ul id="proj_"{{counter}} style="display:none;">
             {% for responsibility in project.responsibilities %}
             <li>{{responsibility}}</li>
             {% endfor %}
@@ -277,6 +278,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         <span class="icon-briefcase"></span>
     </div>
 </div>
+{% assign counter = counter | plus: 1 %}
 {% endfor %}
 
 
@@ -286,7 +288,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         <h2>Trainings attended</h2>
     </div>
     <button onclick="toggle_visibility('train');">...</button>
-    <div id="train" class="content">
+    <div id="train" class="content"  style="display:none;">
         <ul>
             {% for skill in cv.softskills %}
             <li><b>{{ skill.training }}</b> | {{ skill.year }} | {{ skill.provider }}</li>
@@ -300,7 +302,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         <h2>Languages</h2>
     </div>
     <button onclick="toggle_visibility('langs');">...</button>
-    <div id="langs" class="content">
+    <div id="langs" class="content" style="display:none;">
         <ul>
             {% for lang in cv.languages %}
             <li><b> {{ lang.lang }} : </b>{{ lang.level }}</li>
@@ -315,7 +317,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         <h2>Deep Learning and Machine Learning</h2>
     </div>
     <button onclick="toggle_visibility('dl');">...</button>
-    <div id="dl" class="content">
+    <div id="dl" class="content" style="display:none;">
         <h3>Frameworks</h3>
         <ul>
             {% for skill in cv.skills.dl.frameworks %}
@@ -334,17 +336,27 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         <h2>Computer Vision Tools</h2>
     </div>
     <button onclick="toggle_visibility('cv');">...</button>
-    <div id="cv" class="content">
+    <div id="cv" class="content" style="display:none;">
         <ul>
             {% for skill in cv.skills.cv %}
             <li>{{ skill }}</li>
             {% endfor %}
-    </div>    
+    </div> 
+    <div class="title icon-stats-bars">
+        <h2>Natural Language Processing</h2>
+    </div>
+    <button onclick="toggle_visibility('nlp');">...</button>
+    <div id="nlp" class="content" style="display:none;">
+        <ul>
+            {% for skill in cv.skills.nlp %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+    </div>        
     <div class="title icon-stats-bars">
         <h2>Software Skills</h2>
     </div>
     <button onclick="toggle_visibility('soft');">...</button>   
-    <div id="soft" class="content">
+    <div id="soft" class="content" style="display:none;>
         <h3>Programming Languages and IDEs</h3>
         <ul>
             {% for skill in cv.skills.software.programming %}
@@ -410,7 +422,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         <h2>Hardware Skills</h2>
     </div>
     <button onclick="toggle_visibility('hard');">...</button>    
-    <div id="hard" class="content">
+    <div id="hard" class="content" style="display:none;>
         <h3>Electronics</h3>
         <ul>
             {% for skill in cv.skills.hardware.elec %}
@@ -447,7 +459,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
         <h2>System Design and Modeling</h2>
     </div>
     <button onclick="toggle_visibility('sys');">...</button>    
-    <div id="sys" class="content">
+    <div id="sys" class="content" style="display:none;>
         <ul>
             {% for skill in cv.skills.model %}
             <li>{{ skill }}</li>
@@ -458,7 +470,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>Linux</h2>
     </div>
-    <div class="content">
+    <button onclick="toggle_visibility('linux');">...</button>                                         
+    <div id="linux" class="content">
         <ul>
             {% for skill in cv.skills.linux %}
             <li>{{ skill }}</li>
