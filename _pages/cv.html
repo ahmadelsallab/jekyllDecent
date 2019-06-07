@@ -261,8 +261,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     </div>
     <div class="content">
         <h2>{{project.title}}</h2>
-        <button onclick="toggle_visibility('proj_'{{counter}});">...</button>
-        <ul id="proj_"{{counter}} style="display:none;">
+        <button onclick="toggle_visibility({{counter}});">...</button>
+        <ul id={{counter}} style="display:none;">
             {% for responsibility in project.responsibilities %}
             <li>{{responsibility}}</li>
             {% endfor %}
