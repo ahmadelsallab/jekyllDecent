@@ -159,9 +159,10 @@ To summarize into one vectors, we can add 1 attention weight gates at the end. I
 The decoder also depends on attention, and condition on the encoder states in addition to "only" the previous decoded tokens, same as in seq2seq with RNN.
 
 ## Universal transformer
-<TBD>
+The universal transformer (UT) is a mix of RNN and Transfromer. On one hand, the state evolution is parallel-in-time (matrix multiplication with multi-head attention mechanism) as in the Transfromer. On the other hand, the evolution of the hidden states happen as an autoregression or recurrence in both the encoder and decoder. In that sense, the depth (Number of attention blocks) of the encoder or decoder is dynamic according to the recurrence time steps. Also, the dynamic depth is decided per position according to dynamic halting mechanism.
 
 ## ULMFiT
+
 An intuitive, but new trend in NLP is transfer learning. ULMFiT started this wave by training an encoder for language modeling on wiki text, then fine tune by adding classification or decoder layers for the target tasks.
 The idea is well established almost 5 years earlier in the CV community, where networks like VGG, ResNet,...etc are widely used after being trained on imagenet. Those are called backbones.
 
