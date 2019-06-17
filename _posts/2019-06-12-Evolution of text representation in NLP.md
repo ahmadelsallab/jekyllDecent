@@ -6,7 +6,10 @@ category:          Blog posts
 author:            asallab
 tags:              
 ---
+# The Journey to BERT 
+_"A unique journey of text representations"_
 
+The research in text and natural language processing can be summarized in the journey to answer the question: "What is the best representation of language". In fact, this is the most important question for any ML task, for all media: text, speech and image.
 
 # NLP tasks
 - Classification
