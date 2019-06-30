@@ -164,6 +164,13 @@ The decoder also depends on attention, and condition on the encoder states in ad
 ## Universal transformer
 The universal transformer (UT) is a mix of RNN and Transfromer. On one hand, the state evolution is parallel-in-time (matrix multiplication with multi-head attention mechanism) as in the Transfromer. On the other hand, the evolution of the hidden states happen as an autoregression or recurrence in both the encoder and decoder. In that sense, the depth (Number of attention blocks) of the encoder or decoder is dynamic according to the recurrence time steps. Also, the dynamic depth is decided per position according to dynamic halting mechanism.
 
+## XL-Transformer
+The Xtra Long Transformer is an extension over the normal transformer.
+The normal Transformer is based on tokenizing the input sequence into segments.
+Such segmentation might lack long context modeling, especially for tasks like AR language models.
+The XL-Trans adopts a recurrent decoding technique, accounting for a summary state vector for previous context.
+Decoding of next tokens is conditioned on the current segment tokens, in addition to previous context state, under the full attention mechanism lf the transformer.
+
 ## ULMFiT
 
 An intuitive, but new trend in NLP is transfer learning. ULMFiT started this wave by training an encoder for language modeling on wiki text, then fine tune by adding classification or decoder layers for the target tasks.
@@ -172,9 +179,85 @@ The idea is well established almost 5 years earlier in the CV community, where n
 ## GPT
 The GPT mixes the idea of transfer learning with Transformer
 
-
+## GPT2
+TBD
 
 ## BERT
 BERT is based on the Trans and GPT, with the introduction of Bi-dir LM, with two tasks: MLM and Next-sentence prediction
 BERT is said to be the imagenet moment
 http://jalammar.github.io/illustrated-bert/
+
+
+The main contribution of BERT is the masked language model pre-training.
+
+###BERT vs ULMFiT
+
+###BERT vs GPT, GPT2
+
+##XLNet
+
+https://towardsdatascience.com/what-is-xlnet-and-why-it-outperforms-bert-8d8fce710335
+
+https://medium.com/dair-ai/xlnet-outperforms-bert-on-several-nlp-tasks-9ec867bb563b
+
+
+
+Same as BERT is based on the Transformer, XLNet is based on XL-Transformer.
+
+The main contribution of XLNet is the replacement of the masked LM with permutation LM.In MLM, a new token, [MASK], is introduced, which not naturally found in normal text.
+
+Moreover, MLM is based on AR LM concept (predict the next tokens based on past predictions). Such AR approach can only learn forward or backward dependencies, but not both.
+
+In permutation LM, all possible dependencies are modeled, without the need to any mask:
+
+Taking the same example as in the paper, suppose we have a sequence of tokens [x1, x2, x3, x4], and we want to model the dependency of x3 given all others, fwd and bwd, then we need to model;
+
+Fwd:
+
+p(x3|x1, x2)
+
+p(x3|x1)
+
+p(x3|x2)
+
+Bwd:
+
+p(x3|x4)
+
+
+In addition to the idea of Xtra Long context in XL-Transformer, we need to model also x3 given any past context:
+
+p(x3|mem_context)
+
+Those probs are the result of x3 being in the 1st, 2nd, 3rd, 4th positions, with any other token in the other positions.
+
+(x3, ?, ?, ?)
+
+(?, x3, ?, ?)
+
+(?,?, x3, ?)
+
+(?, ?, ?, x3)
+
+? Means x1, x2 or x4
+
+For example predictong x3 from the sequence (x2, x1, x3, x4) means modeling:
+
+p(x3| x1, x2, x4)
+
+Which is mixing:
+
+Fwd: p(x3| x1, x2)
+Bwd: p(x3|x4)
+
+And hence, capturing both fwd and bwd dependencies.
+
+## What's next?
+The idea of transfer from pretrained LM, and fine tune for other tasks seems to be taking over since its introduction (or formalization) in ULMFiT.
+From ULMFiT to GPT to BERT to XLNet, two factors are changind:
+
+1. The encoder model.
+2. The LM training method.
+
+Number seems to be good candidate for extensions.
+For number 1, hierarichal models like HATT, still not exploited for longer context modeling.
