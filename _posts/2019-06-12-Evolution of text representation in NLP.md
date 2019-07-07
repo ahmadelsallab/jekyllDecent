@@ -252,6 +252,31 @@ Bwd: p(x3|x4)
 
 And hence, capturing both fwd and bwd dependencies.
 
+# Adapters
+
+Google
+
+Parameter-Efficient Transfer Learning for NLP
+
+Add auto encoder like modules called adapters. Their parameters are the onlh fine tuned weights. 
+The rest remains constant across modeks snd tasks.
+The adapter mosuoe role is to encode thd task specific input into a common soace betweem tasks
+then spits out a decoded vector of the same input size such that thecwholecore trained model remains the same in terms of compatible dimensions.
+
+Adapter init weights as identity (just copy), so that no change to the original model.
+
+"Adapter-based tuning relates to multi-task and continual learning. Multi-task learning also results in compact models. However, multi-task learning requires simultaneous access to all tasks, which adapter-based tuning does not require. Continual learning systems aim to learn from an endless stream of tasks. This paradigm is challenging because networks forget previous tasks after re-training (McCloskey &Cohen, 1989; French, 1999). Adapters differ in that the tasks do not interact and the shared parameters are frozen. This means that the model has perfect memory of previous tasks using a small number of task-specific parameters."
+
+
+
+Efficient parametrization of multi-domain deep neural networks.
+
+"Wepresent a strategy for tuning a large text model on several downstream tasks. Our strategy has three key properties: (i) it attains good performance, (ii) it permits training on tasks sequentially, that is, it does not require simultaneous access to all datasets, and (iii) it adds only a small number of additional parameters per task. These properties are especially useful in the context of cloud services, where many models need to be trained on a series of downstream tasks, so a high degree of sharing is desirable. To achieve these properties, we propose a new bottleneck adapter module. Tuning with adapter modules involves adding a small number of new parameters to a model, which are trained on the downstream task (Rebuffi et al., 2017). When performing vanilla fine-tuning of deep networks, a modification is made to the top layer of the network. This is required because the label spaces and losses for the upstream and downstream tasks differ. Adapter modules perform more general architectural modifications to re-purpose a pretrained network for a downstream task. In particular, the adapter tuning strategy involves injecting new layers into the original network. The weights of the original network are untouched, whilst the new adapter layers are initialized at random. In standard fine-tuning, the new top-layer and the original weights are co-trained. In contrast, in adaptertuning, the parameters of the original network are frozen and therefore may be shared by many tasks. Adapter modules have two main features: a small number of parameters, and a near-identity initialization. The adapter modules need to be small compared to the layers of the original network. This means that the total model size grows relatively slowly when more tasks are added. A near-identity initialization is required for stable training of the adapted model; we investigate this empirically in Section 3.6. By initializing the adapters to a near-identity function, original network is unaffected when training starts. During training, the adapters may then be activated to change the distribution of activations throughout the network. The adapter modules may also be ignored if not required; in Section 3.6 we observe that some adapters have more influence on the network than others. We also observe that if the initialization deviates too far from the identity function, the model may fail to train."
+
+"To limit the number of parameters, we propose a bottleneck architecture. The adapters first project the original d-dimensional features into a smaller dimension, m, apply a nonlinearity, then project back to d dimensions. The total number of parameters added per layer, including biases, is 2md +d+m. By setting m d, we limit the number of parameters added per task; in practice, we use around 0.5 − 8% of the parameters of the original model. The bottleneck dimension, m, provides a simple means to tradeoff performance with parameter efficiency. The adapter module itself has a skip-connection internally. With the skip-connection, if the parameters of the projection layers are initialized to near-zero, the module is initialized to an approximate identity function."
+
+
+
 ## What's next?
 The idea of transfer from pretrained LM, and fine tune for other tasks seems to be taking over since its introduction (or formalization) in ULMFiT.
 From ULMFiT to GPT to BERT to XLNet, two factors are changind:
@@ -261,3 +286,6 @@ From ULMFiT to GPT to BERT to XLNet, two factors are changind:
 
 Number seems to be good candidate for extensions.
 For number 1, hierarichal models like HATT, still not exploited for longer context modeling.
+
+
+
