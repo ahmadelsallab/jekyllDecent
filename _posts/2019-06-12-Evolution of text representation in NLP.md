@@ -30,7 +30,31 @@ Words are digitized as indices in vocabulary vectors.
 
 Words as indices is not good since higher index means higher value, which is not true.
 
+## Word and Sentence Word representations
+__Image data analogy__
+In image data, the smallest unit of representation is the pixel. A pixel is usually represented by its intensity on a 0 to 1 scale, which is called grey-scale if we are to neglect colors. For colored images, we represent each pixel with 3 numbers, referred to as channels, each representing an intensity component for Red, Green or Blue colors, and their mix represents a color in the color space.
 
+Given the pixel representation, an image is usually a 2D matrix made of such pixels, hence the minimum representation is 2D matrix of intensities, or 3D tensor including the colors components.
+
+If we have video data, then we have many of such 2D images, called frames, and hence we have 4D tensor representations.
+
+In text, the smallest unit of representation can be a word or characters, which are known as word or character level representations. For simplicity, let's start our analogy by assuming that the smallest language representation unit is the word. 
+
+A word can be represented in many ways, which we will discuss below. The range or of words representation is a function of the dimension of what is called "vocabulary", which defines the list of all language words (or the subset we are interested in). Using this vocabulary, there are many representations possible to represent each word. In most cases, a word is represented using 1D vector.
+
+Due to the existence of vacabulary, most of the time we don't keep track of all possible vocabulary words, or in the best case, we might ignore some cosmetic inflections of the words, like suffix, prefix,...etc. Keeping only a subset of the vocabulary creates another issue called Out-Of-Vocabulary (OOV) words, where we might encounter words that are not in the vocabulary vector. One of the easiest approaches to overcome this is to use character level instead of word level representations.
+
+Since language is a sequence of words, we have another dimension to account for the sequence, same as we had in case of video. However, for text, we can have variable length sequence to represent a sentence for example (not all sentences are of the same length). For now we will assume we have a maximum length that we will pad all sentences to, and hence we have 2D matrix. You can think of character level representation of words in same way we go from words to sentences, with the exception that the range of characters is limited by the alphabet size of the language, and no existence of vocabulary in this case.
+
+In addition, we might define the text structure in a more hierarichal way, where a document is made of paragraphs, and paragraphs made of sentences, and sentences made of words,..etc. Hence, sometimes we can represent the text in 3D or 4D tensors.
+
+In most of NLP research we are either concerned of word or sentence representations. Sentences are sometimes referred to as segments. Also in some cases, sentence representations are called document representation, assuming that the document is made of one long sequence of words, without any further structure. 
+
+Next we will review some methods for both cases.
+
+
+
+# Word representatins:
 ## One-Hot-Encoding (OHE)
 
 Each index is mapped to a OHE vector
@@ -40,13 +64,7 @@ No similarity relation between words vectors
 
 Also, its a very sparse vecor; vocab can reach 13M words.
 
-## Bad of Words (BoW
 
-More compact representation is to encode the vocab vector for each sentence, and mark the locations of the words of vocab appearing in that sentence as 1, while all other locations are 0.
-
-It's still a sparse vector, but the sentence representation is more compact (one 13M vector for sentence/document instead of word).
-
-However, the order of words is lost.
 
 ## Word vectors
 
@@ -76,14 +94,26 @@ There are two famous other tasks (at least in word2vec):
 The skip-gram is near to the validity task, we ask the net to predict the precedding and secceeding n words in a window, given a center word.
 In some sense this encodes the context.
 
+## FastText
+
+## GloVe
+
 ## ELMO
 The word2vec provides the same vector regardless the context of the word. This prevents word sense disambiguation
 ELMO provides contextualized vecotrs, learned by mixing the current word vecotr and its negithbors
 
 ELMO can work at char level, which reduces the OOV rate.
  
-# Document representation
+# Sentence or document representation
 We are not interested in words represntation, but in sequence of words; document or at least sentence represenations.
+
+## Bag of Words (BoW)
+
+More compact representation is to encode the vocab vector for each sentence, and mark the locations of the words of vocab appearing in that sentence as 1, while all other locations are 0.
+
+It's still a sparse vector, but the sentence representation is more compact (one 13M vector for sentence/document instead of word).
+
+However, the order of words is lost.
 
 ## Bag of words vectors
 The BoW idea words for sequence of words in the same manner described above. 
@@ -94,7 +124,6 @@ S = 1/N(W1 + W2 + ....+WN)
 Still order is missing
 
 ## RNN
-
 
 For sequence learning problems, either for classification or sequence production (seq2seq), what we want to do is to summarize the sequence in one vector. It is also desirable to encode the order of words somehow.
 
