@@ -40,7 +40,7 @@ If we have video data, then we have many of such 2D images, called frames, and h
 
 In text, the smallest unit of representation can be a word or characters, which are known as word or character level representations. For simplicity, let's start our analogy by assuming that the smallest language representation unit is the word. 
 
-A word can be represented in many ways, which we will discuss below. The range or of words representation is a function of the dimension of what is called "vocabulary", which defines the list of all language words (or the subset we are interested in). Using this vocabulary, there are many representations possible to represent each word. In most cases, a word is represented using 1D vector.
+A word can be represented in many ways, which we will discuss below. The range or of words representation is a function of the dimension of what is called "vocabulary" or vocab for short, which defines the list of all language words (or the subset we are interested in). Using this vocabulary, there are many representations possible to represent each word. In most cases, a word is represented using 1D vector.
 
 Due to the existence of vacabulary, most of the time we don't keep track of all possible vocabulary words, or in the best case, we might ignore some cosmetic inflections of the words, like suffix, prefix,...etc. Keeping only a subset of the vocabulary creates another issue called Out-Of-Vocabulary (OOV) words, where we might encounter words that are not in the vocabulary vector. One of the easiest approaches to overcome this is to use character level instead of word level representations.
 
@@ -59,29 +59,35 @@ Next we will review some methods for both cases.
 
 Each index is mapped to a OHE vector
 
-No similarity relation between words vectors
+Issues:
+
+- No similarity relation between words vectors. Dot product is a measure of simialrity. Since OHE gives orthogonal vecotrs by definition, we have 0 value in all cases:
+
 [0 0 0 1 0 0] T . [1 0 0 0 0 0 0] = 0
 
-Also, its a very sparse vecor; vocab can reach 13M words.
+- Also, its a very sparse vecor; vocab can reach 13M words.
 
 
+## Distributional similarity representation: Word vectors
+To encode similarity of words in the word representation, we better use the context of the word. In this way, words that occur in similar context will have near representation. Also, in this way their dot products will not be 0 as in case of OHE, but will have high value if they are similary, and low otherwise. This is the objective.
 
-## Word vectors
-
-Learn a dense representation of words, say a vector of 50 or 100 dimensions.
-
-This vector is called an "Embedding" for reasons that will become clear later.
+Learn a dense representation of words, say a vector of 50 or 100 dimensions of real numbers. Such vectors represent a projection of the word in a space called the "Embedding" space. This vector is called an "Embedding" for short.
 
 If we stack all the vectors in one table we have an "Embedding table", or a Look-up-table (LUT).
 
+The table is 2D; the first dimension is the vocabulary size. The 2nd dimension is the embedding vector dimensionality we want to project to (50, 100, typically 300).
+
+As a digression, it's better to keeps the stems in the vocabulary, and for some applications, it might be also good to keep separate entries for the suffix, prefix,..etc (in general: morphemes), instead of keeping separate entries for the different morphologies of the same word, because simply it's hard to keep all of them!
+As an example, consider the word incorrect, you better keep an entry for "in" and "correct", because you might enounter other morphemes of "correct", like "correctly", "correctness",..etc. This method reduces the OOV.
+
 If we represent the word as OHE, then dot product of the word with the LUT gives the word vector.
-In that sense, the LUT can be thought as weight matrix.
+In that sense, the LUT can be thought as a _weight matrix_.
 
 _How to find the values in the LUT?_
 
 As we said the LUT can be thought as weights matrix.
 
-We want to have vectors that encode similarity, in a way that synonyms are near to each others, same as in wordnet.
+__We want to have vectors that encode similarity__, in a way that synonyms are near to each others, same as in wordnet.
 
 To do that, we come up with an artificial task that encode similarity. The most trivial task is the "validity" task as follows: stick every 2 neighboring words vecotrs together, and train a network to produce "1" for that pair, meaning that this pair can occur together. And then flip one of them with any random word, and train the net to produce "0" for the new pair, marking that as "invalid". 
 
