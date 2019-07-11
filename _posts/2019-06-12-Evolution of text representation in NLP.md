@@ -79,9 +79,6 @@ If we stack all the vectors in one table we have an "Embedding table", or a Look
 
 The table is 2D; the first dimension is the vocabulary size. The 2nd dimension is the embedding vector dimensionality we want to project to (50, 100, typically 300).
 
-As a digression, it's better to keeps the stems in the vocabulary, and for some applications, it might be also good to keep separate entries for the suffix, prefix,..etc (in general: morphemes), instead of keeping separate entries for the different morphologies of the same word, because simply it's hard to keep all of them!
-As an example, consider the word incorrect, you better keep an entry for "in" and "correct", because you might enounter other morphemes of "correct", like "correctly", "correctness",..etc. This method reduces the OOV.
-
 If we represent the word as OHE, then dot product of the word with the LUT gives the word vector.
 In that sense, the LUT can be thought as a _weight matrix_.
 
@@ -125,7 +122,7 @@ The position of the word in the window is not considered.
 - CBOW:
 x1, x2--> x3 <-- x4
 
-Predict the center word given the context words. The context words are given as bag-of-words (position is dropped).
+Predict the center word given the context words. The context words are given as bag-of-words vectors as will described below (position is dropped).
 
 
 In some sense this encodes the context.
@@ -205,6 +202,21 @@ Such model treats the problems of both count based and word2vec methods. In addi
 
 ## FastText
 
+https://research.fb.com/downloads/fasttext/
+
+https://arxiv.org/pdf/1607.04606.pdf
+
+
+
+When building the LUT of word vectors, it's better to keeps the stems in the vocabulary, and for some applications, it might be also good to keep separate entries for the suffix, prefix,..etc (in general: morphemes), instead of keeping separate entries for the different morphologies of the same word, because simply it's hard to keep all of them!
+As an example, consider the word incorrect, you better keep an entry for "in" and "correct", because you might enounter other morphemes of "correct", like "correctly", "correctness",..etc. This method reduces the OOV.
+
+In fasttext this idea is further generalized to subdivide words into character n-grams, and keep the vectors for those character segments. A word vector is the sum of its constituing char n-grams vectors. 
+
+This is something between character and word level representations. The subword information is accounted for.
+
+https://arxiv.org/pdf/1607.01759.pdf
+The n-gram vectors trick is then used to train a fast text classifier using linear models, referred to as fasttext.
 
 ## ELMO
 The word2vec provides the same vector regardless the context of the word. This prevents word sense disambiguation
@@ -241,13 +253,13 @@ It's still a sparse vector, but the sentence representation is more compact (one
 
 However, the order of words is lost.
 
-## Bag of words vectors
+## CBOW: Bag of words vectors
 The BoW idea words for sequence of words in the same manner described above. 
 A more advanced version is to average the words vectors of the sentence words:
 
 S = 1/N(W1 + W2 + ....+WN)
 
-Still order is missing
+Still order is missing, so it's a BoW. Since the word vectors have continous values, so it's Contineous. Hence the name CBoW.
 
 ## RNN
 
