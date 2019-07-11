@@ -89,20 +89,50 @@ As we said the LUT can be thought as weights matrix.
 
 __We want to have vectors that encode similarity__, in a way that synonyms are near to each others, same as in wordnet.
 
-To do that, we come up with an artificial task that encode similarity. The most trivial task is the "validity" task as follows: stick every 2 neighboring words vecotrs together, and train a network to produce "1" for that pair, meaning that this pair can occur together. And then flip one of them with any random word, and train the net to produce "0" for the new pair, marking that as "invalid". 
+To do that, we come up with an artificial task that encode similarity. The most trivial task is the "validity" task as follows: stick every 2 neighboring words vectors together, and train a network to produce "1" for that pair, meaning that this pair can occur together. And then flip one of them with any random word, and train the net to produce "0" for the new pair, marking that as "invalid". 
 
 Of course such trivial task by itself is not useful in anything, but after we finish, we have a LUT that encodes words that occur together in near vectors in the embedding space.
 
 There are two famous other tasks (at least in word2vec):
-- Skip-gram
-- CBOW
+- Skip-gram:
+x1, x2 <-- x3 --> x4
 
-The skip-gram is near to the validity task, we ask the net to predict the precedding and secceeding n words in a window, given a center word.
+Predict the context words given the center one. We ask the net to predict the precedding and secceeding n words in a window, given a center word.
+
+It's important to note that, the loss in this case is the probability of all context words given the center word.
+See CS224n, lec 2, 00:26:00.
+
+$J(theta) = Pi_t=1..T(Pi_j=-m..m, j!= 0(p(wt+j | wt;theta))$
+
+Where wt+j are the context words, while wt is the center one. Each p(wt+j | wt;theta) represents the similarity between each context word wt+j and the cetner word wt. theta is the weights of the word vector of wt, when it's a center word.
+
+This similarity can be calculated by a softmax, say u is the word vector of wt+j and v is the vector of wt:
+
+p(wt+j | wt;theta) = softmax(wt+j, wt) = exp(u.v)/sum_vocab(exp(u_i.v)
+
+Note we sum over the vocab, to get a prob over all possibilities, where the sample space in this case is all vocab words.
+
+In this case, a word can take two roles: as a target word (center word), as a context word (outside word). We keep two vectors in our LUT for each word, one for "outside" role, and another one for the "center" role. You could keep one vector per word, but empirically keeping 2 works better. In this case we have 2 LUT's.
+
+See CS224n, lec 2, 00:30:00.
+
+The position of the word in the window is not considered.
+
+- CBOW:
+x1, x2--> x3 <-- x4
+
+Predict the center word given the context words. The context words are given as bag-of-words (position is dropped).
+
+
 In some sense this encodes the context.
+
+The position of the word in the window is not considered.
+
+## GloVe
+
 
 ## FastText
 
-## GloVe
 
 ## ELMO
 The word2vec provides the same vector regardless the context of the word. This prevents word sense disambiguation
