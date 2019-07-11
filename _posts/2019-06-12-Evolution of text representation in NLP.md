@@ -55,6 +55,8 @@ Next we will review some methods for both cases.
 
 
 # Word representatins:
+![ref](CS224n lec2,3)
+
 ## One-Hot-Encoding (OHE)
 
 Each index is mapped to a OHE vector
@@ -68,7 +70,7 @@ Issues:
 - Also, its a very sparse vecor; vocab can reach 13M words.
 
 
-## Distributional similarity representation: Word vectors
+## Distributional similarity representation: Word vectors or word2vec
 To encode similarity of words in the word representation, we better use the context of the word. In this way, words that occur in similar context will have near representation. Also, in this way their dot products will not be 0 as in case of OHE, but will have high value if they are similary, and low otherwise. This is the objective.
 
 Learn a dense representation of words, say a vector of 50 or 100 dimensions of real numbers. Such vectors represent a projection of the word in a space called the "Embedding" space. This vector is called an "Embedding" for short.
@@ -110,9 +112,11 @@ This similarity can be calculated by a softmax, say u is the word vector of wt+j
 
 p(wt+j | wt;theta) = softmax(wt+j, wt) = exp(u.v)/sum_vocab(exp(u_i.v)
 
-Note we sum over the vocab, to get a prob over all possibilities, where the sample space in this case is all vocab words.
+Note we sum over the vocab, to get a prob over all possibilities, where the sample space in this case is all vocab words. But this is a huge sum! And we need to redo it for every window (for the center word)! Moreover, it actually doesn't teach the model much, since it represents the relation with all the vocab words and the center word, which can be very rarely coocurring. Instead, we can just limit the sum to some random vocab words and that's it.
 
-In this case, a word can take two roles: as a target word (center word), as a context word (outside word). We keep two vectors in our LUT for each word, one for "outside" role, and another one for the "center" role. You could keep one vector per word, but empirically keeping 2 works better. In this case we have 2 LUT's.
+In this case, a word can take two roles: as a target word (center word), as a context word (outside word). We keep two vectors in our LUT for each word, one for "outside" role, and another one for the "center" role. You could keep one vector per word, but empirically keeping 2 works better. In this case we have 2 LUT's V for centers and U for outside.
+We could have one LUT from which we get u and v. However, in this case, if we are to optimize/change u to min. J above, then v in this case is considered constant, however, it comes from the same big LUT, which makes optimizes unstable in some cases. For that reason, it's again better to keep 2 LUT's; U and V. 
+After we finish, we can combine the 2 in many ways. The best is to sum them up to have one LUT.
 
 See CS224n, lec 2, 00:30:00.
 
@@ -126,9 +130,77 @@ Predict the center word given the context words. The context words are given as 
 
 In some sense this encodes the context.
 
-The position of the word in the window is not considered.
+__Issues:__
+
+1- The position of the word in the window is not considered. Not a big deal if we want to capture the word semantics only (order doesn't matter a lot in that case).
+
+2- Scales with the corpus size. You need to run through windows over the whole corpus
+
+3- It doesn't capture any statistics of the corpus (as we will see later in count based methods)
 
 ## GloVe
+
+__Count based methods__
+There's another method before word2vec; why not we count the coocurrences of words together over the entire vocab?
+This has the advantage that we already calculated statistcs about the corpus. You can through away the corpus, and work on imporving those statistcs.
+
+__Co-occurrence matrix: window or document__
+Let the vocab be V and its length is |V|. Simply, we can have |V|x|V| matrix, with rows and cols being the words, and the values are the coocurrence counts. Cooccurrnce here is when 2 words appear in the same window (ignoring their positions or relative positions in that window. 
+
+The rows of that matrix represent word vectors, but what do they represent?
+
+In case of doing it window by window, we capture some syntax info of the word, like POS (verbs cooccur more, and so do nouns,..etc).
+
+If we build this matrix with the window grows to the entire document (having a corpus of many docs in that case), we get an approach called Latent Semantic Analysis (LSA). In LSA, word vectors encode the general topics of the document (sports, economy, ...etc).
+
+Note that, document counts provide more dense vectors than window counts.
+
+Word2vec is encoding the coocurrence in some sense. For every window, we measure the dot product of words, and update the LUT based on how similar a word is to others in the contex. What if we initialize the LUT with the coocurrence matrix counts for the entire corpus?
+
+__Issues:__
+
+Before we discuss this possibility, there couple of issues with that matrix:
+
+1- The increase as the size of the vocab. |V| can be up to 13M words!
+This needs big storage of course, but more critical, with every new word added in the vocab, all the LUT needs to be updated, in value and size as well!
+Unlike word2vec, although the values need to change, but the output dimension (cols) is the same.
+
+2- The large size of the vectors comes with sparsity issues (it's not dense as in word2vec, which is obtained as neural word vectors or embeddings). This sparsity in its extreme gets us back to the main issue with OHE.
+
+3- High frequent words (like the, a,...) cooccur a lot with words. So they will have dense and high counts.
+
+__Embedding to the rescue__
+
+So how to make that LUT of coocurrence small and dense in the same time? Use Embeddings.
+
+_In essence, embeddings are just projections to a space._
+
+The simplest embedding could be done through dimensionality reduction by SVD of the cooccurrence LUT. PCA is also an option.
+
+But SVD has high computational cost (scales quadratic with the LUT size O(|V||V|^2). Also, you need to re-run everytime a new word is added to the vocab.
+Finally, if you have a downstream task, say text classificatio, and you want to do it using neural nets (SoTA today), you can only inject the SVD vectors as external or pre-processed vectors. But you can't optimize or change the word vectors as part of the training process (which is usually called end-end). In word2vec you can, since the method of training word2vec is also based on neural nets. Actually it can be thought as auxiliary task.
+
+__How to combine count based methods (co-occurrence) and distributed representation (word2vec/skip gram)__
+
+__GloVe__
+
+In GloVe, we have a similar objective as skip-gram, but with two main differences:
+
+1- The sum is over the entire vocab words, not window by window
+
+2- The coocurrence matrix is part of the objective. For every 2 words occuring together in a context (Window or Document) We want to minimize the difference between the words similarity (dot product) and their cooccurrence count.
+
+3- We weight high frequent words less (like the, is, a,... , mostly stop words) within the cooccurrence matrix
+
+J(theta) = min sum_i,j=LUT_words(f(Pij)(ui.vj - log Pij)^2
+
+Pij = coocurrence matrix
+f = weighting high freq words less
+
+u and v are two rows or columns of the LUT. Same as in skip-gram, we could have one LUT from which we get u and v. However, in this case, if we are to optimize/change u to min. J above, then v in this case is considered constant, however, it comes from the same big LUT, which makes optimizes unstable in some cases. For that reason, it's again better to keep 2 LUT's; U and V. 
+After we finish, we can combine the 2 in many ways. The best is to sum them up to have one LUT.
+
+Such model treats the problems of both count based and word2vec methods. In addition, it works good on small datasets. Probably because it already has prior knowledge, which is Pij encoding some stats of the corpus; which is the coocurrence in this case.
 
 
 ## FastText
