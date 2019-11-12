@@ -786,7 +786,8 @@ Efficient parametrization of multi-domain deep neural networks.
 
 "To limit the number of parameters, we propose a bottleneck architecture. The adapters first project the original d-dimensional features into a smaller dimension, m, apply a nonlinearity, then project back to d dimensions. The total number of parameters added per layer, including biases, is 2md +d+m. By setting m d, we limit the number of parameters added per task; in practice, we use around 0.5 − 8% of the parameters of the original model. The bottleneck dimension, m, provides a simple means to tradeoff performance with parameter efficiency. The adapter module itself has a skip-connection internally. With the skip-connection, if the parameters of the projection layers are initialized to near-zero, the module is initialized to an approximate identity function."
 
-
+# RoBERTa (FaceBook FAIR)
+TBA
 
 ## What's next?
 The idea of transfer from pretrained LM, and fine tune for other tasks seems to be taking over since its introduction (or formalization) in ULMFiT.
